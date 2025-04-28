@@ -122,12 +122,21 @@ dialog button {
 
 #grid {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  height: 48rem;
+  width: 48rem;
+}
+
+.pixel-row {
+  display: flex;
+  flex: 1;
 }
 
 .pixel {
   background-color: black;
   border: 0.0625rem solid #020202;
+  flex: 1;
 }
 
 .pixel:hover {

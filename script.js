@@ -52,23 +52,25 @@ function prepareSettingsModal() {
 
 function prepareGrid(gridSize) {
     clearGrid();
-    const gridArea = gridSize ** 2;
 
-    // Circumvents precision error that causes grid issues at size 50+
-    const pixelSize = Math.round(computedGridSize / gridSize);
-    grid.style.width = pixelSize * gridSize + 'px';
+    const pixelRowTemplate = document.createElement('div');
+    pixelRowTemplate.classList.add('pixel-row');
+    const pixelTemplate = document.createElement('div');
+    pixelTemplate.classList.add('pixel');
 
-    for (let i = 0; i < gridArea; i++) {
-        const pixel = document.createElement('div');
-        pixel.classList.add('pixel');
+    for (let column = 0; column < gridSize; column++) {
+        const pixel = pixelTemplate.cloneNode();
+        pixelRowTemplate.append(pixel);
+    }
 
-        pixel.style.height = pixelSize + 'px';
-        pixel.style.width = pixelSize + 'px';
+    for (let row = 0; row < gridSize; row++) {
+        const pixelRow = pixelRowTemplate.cloneNode(true);
+        grid.append(pixelRow);
+    }
 
+    for (const pixel of grid.querySelectorAll('.pixel')) {
         pixel.addEventListener('mousedown', updatePixel);
         pixel.addEventListener('mouseenter', updatePixel);
-
-        grid.append(pixel);
     }
 }
 

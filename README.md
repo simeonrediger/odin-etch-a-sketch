@@ -1,4 +1,4 @@
-# Odin Etch a Sketch
+# Odin Pixel Art
 A simple pixel art application.
 
 Features:

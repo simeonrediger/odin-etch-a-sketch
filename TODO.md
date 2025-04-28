@@ -2,7 +2,6 @@
 - add color picker
 - add color randomizer option
 - add burn tool
-- write README.md
 
 - add clear grid button?
 - add eyedropper?

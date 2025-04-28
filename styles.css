@@ -43,6 +43,12 @@ header {
   text-wrap: nowrap;
 }
 
+label,
+input,
+button {
+  font-size: 1.5rem;
+}
+
 button {
   background-color: var(--accent-color);
   border: none;
@@ -63,7 +69,7 @@ label {
 
 input {
   background-color: var(--input-background-color);
-  border: 0.0625rem solid var(--border-color);
+  border: 0.125rem solid var(--border-color);
   border-radius: 0.5rem;
   color: inherit;
   text-align: center;
@@ -86,7 +92,7 @@ input.error {
   padding: unset;
 }
 
-button.settings:hover {
+.icon:hover {
   color: var(--accent-color);
 }
 
@@ -112,12 +118,6 @@ dialog .container {
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
-}
-
-dialog label,
-dialog input,
-dialog button {
-  font-size: 1.5rem;
 }
 
 #grid {

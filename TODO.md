@@ -1,9 +1,12 @@
 - create separate files for settings modal, mouse state, and pixel logic
-- refine label and input accessibility
-- optimize event listener performance
+- fix pixels being skipped when the cursor moves too fast
 - add color picker
-- add eyedropper
-- add clear grid button
+- add color randomizer option
+- add burn tool
+- write README.md
+
+- add clear grid button?
+- add eyedropper?
 - add paint bucket?
 - add rectangle tool?
 - add select tool?

@@ -5,7 +5,7 @@ const container = document.querySelector('#grid-container');
 let size = 16;
 
 function create(size) {
-    clearGrid();
+    clear();
 
     const pixelRowTemplate = document.createElement('div');
     pixelRowTemplate.classList.add('pixel-row');
@@ -28,7 +28,7 @@ function create(size) {
     }
 }
 
-function clearGrid() {
+function clear() {
     container.innerHTML = '';
 }
 

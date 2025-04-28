@@ -28,9 +28,17 @@ body {
   width: calc(3rem * 16);
 }
 
-#grid > div {
+.pixel {
   background-color: black;
-  border: 0.125rem solid gray;
+  border: 0.0625rem solid #020202;
   height: 3rem;
   width: 3rem;
+}
+
+.pixel:hover {
+  opacity: 70%;
+}
+
+.pixel.filled {
+  background-color: red;
 }

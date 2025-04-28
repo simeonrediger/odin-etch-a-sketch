@@ -19,8 +19,27 @@ body {
   user-select: none;
 }
 
-#title {
+header {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+#title {
+  text-wrap: nowrap;
+}
+
+button.settings {
+  background: transparent;
+  border: none;
+  color: #cccccc;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+button.settings:hover {
+  color: #8cb4ff;
 }
 
 #grid {

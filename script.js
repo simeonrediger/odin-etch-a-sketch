@@ -1,10 +1,12 @@
+const settingsButton = document.querySelector('button.settings');
+settingsButton.addEventListener('click', openSettingsMenu);
+
 const grid = document.querySelector('#grid');
 const gridSize = 16;
 populateGrid();
 
 let leftMouseIsDown;
 trackLeftMouseClicks();
-
 
 function populateGrid() {
     for (let i = 0; i < gridSize ** 2; i++) {
@@ -30,4 +32,7 @@ function trackLeftMouseClicks() {
 function draw(event) {
     const pixel = event.target;
     pixel.classList.add('filled');
+}
+
+function openSettingsMenu() {
 }

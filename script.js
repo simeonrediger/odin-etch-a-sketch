@@ -1,5 +1,4 @@
-const settingsButton = document.querySelector('button.settings');
-settingsButton.addEventListener('click', openSettingsMenu);
+setUpSettingsModal();
 
 const grid = document.querySelector('#grid');
 const gridSize = 16;
@@ -7,6 +6,20 @@ populateGrid();
 
 let leftMouseIsDown;
 trackLeftMouseClicks();
+
+function setUpSettingsModal() {
+    const settingsModal = document.querySelector('#settings');
+    const openSettingsButton = document.querySelector('button.settings');
+    const closeSettingsButton = document.querySelector('#settings button.close');
+
+    openSettingsButton.addEventListener(
+        'click', () => settingsModal.showModal()
+    );
+
+    closeSettingsButton.addEventListener(
+        'click', () => settingsModal.close()
+    );
+}
 
 function populateGrid() {
     for (let i = 0; i < gridSize ** 2; i++) {
@@ -34,5 +47,10 @@ function draw(event) {
     pixel.classList.add('filled');
 }
 
-function openSettingsMenu() {
+function openSettingsModal() {
+    settingsMenu.showModal();
+}
+
+function closeSettingsModal() {
+    settingsMenu.close();
 }

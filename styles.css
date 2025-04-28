@@ -1,6 +1,18 @@
+:root {
+  --accent-color: #8cb4ff;
+  --background-color: #181818;
+  --border-color: #303030;
+  --foreground-color: #cccccc;
+  --input-background-color: #303030;
+}
+
 *,
 *::before,
-*::after {
+*::after,
+dialog,
+dialog *,
+dialog *::before,
+dialog *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,8 +20,8 @@
 
 body {
   align-items: center;
-  background-color: #181818;
-  color: #cccccc;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
@@ -30,16 +42,19 @@ header {
   text-wrap: nowrap;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 button.settings {
   background: transparent;
-  border: none;
-  color: #cccccc;
-  cursor: pointer;
+  color: var(--foreground-color);
   font-size: 2rem;
 }
 
 button.settings:hover {
-  color: #8cb4ff;
+  color: var(--accent-color);
 }
 
 #grid {
@@ -61,4 +76,64 @@ button.settings:hover {
 
 .pixel.filled {
   background-color: red;
+}
+
+dialog {
+  background-color: inherit;
+  border: 0.125rem solid var(--border-color);
+  border-radius: 1rem;
+  color: inherit;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  user-select: inherit;
+}
+
+dialog::backdrop {
+  background-color: black;
+  opacity: 50%;
+}
+
+dialog .container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+label {
+  margin-right: 1rem;
+  text-wrap: nowrap;
+}
+
+dialog label,
+dialog input,
+dialog button {
+  font-size: 1.5rem;
+}
+
+input {
+  background-color: var(--input-background-color);
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 0.5rem;
+  color: inherit;
+  text-align: center;
+  width: 5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+dialog button {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.25rem 1.25rem;
+}
+
+.field {
+  display: flex;
+  gap: 1rem;
 }

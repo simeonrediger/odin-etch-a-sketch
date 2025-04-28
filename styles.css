@@ -120,7 +120,7 @@ dialog .container {
   padding: 1rem;
 }
 
-#grid {
+#grid-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

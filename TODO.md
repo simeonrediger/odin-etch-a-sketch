@@ -1,4 +1,3 @@
-- create separate files for settings modal, mouse state, and pixel logic
 - fix pixels being skipped when the cursor moves too fast
 - add color picker
 - add color randomizer option

@@ -2,6 +2,7 @@
   --accent-color: #8cb4ff;
   --background-color: #181818;
   --border-color: #303030;
+  --error-color: #db6b6b;
   --foreground-color: #cccccc;
   --input-background-color: #303030;
 }
@@ -73,6 +74,10 @@ input:focus {
   outline: none;
 }
 
+input.error {
+  border-color: var(--error-color);
+}
+
 .icon {
   background: transparent;
   border-radius: unset;
@@ -118,14 +123,11 @@ dialog button {
 #grid {
   display: flex;
   flex-wrap: wrap;
-  width: calc(3rem * 16);
 }
 
 .pixel {
   background-color: black;
   border: 0.0625rem solid #020202;
-  height: 3rem;
-  width: 3rem;
 }
 
 .pixel:hover {

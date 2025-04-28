@@ -1,3 +1,9 @@
-- implement custom grid sizing
-- round grid corners
 - create separate files for settings modal, mouse state, and pixel logic
+- refine label and input accessibility
+- optimize event listener performance
+- add color picker
+- add eyedropper
+- add clear grid button
+- add paint bucket?
+- add rectangle tool?
+- add select tool?

@@ -43,39 +43,46 @@ header {
 }
 
 button {
+  background-color: var(--accent-color);
   border: none;
+  border-radius: 0.5rem;
   cursor: pointer;
+  padding: 0.25rem 1.25rem;
 }
 
-button.settings {
+.field {
+  display: flex;
+  gap: 1rem;
+}
+
+label {
+  margin-right: 1rem;
+  text-wrap: nowrap;
+}
+
+input {
+  background-color: var(--input-background-color);
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 0.5rem;
+  color: inherit;
+  text-align: center;
+  width: 5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.icon {
   background: transparent;
+  border-radius: unset;
   color: var(--foreground-color);
   font-size: 2rem;
+  padding: unset;
 }
 
 button.settings:hover {
   color: var(--accent-color);
-}
-
-#grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(3rem * 16);
-}
-
-.pixel {
-  background-color: black;
-  border: 0.0625rem solid #020202;
-  height: 3rem;
-  width: 3rem;
-}
-
-.pixel:hover {
-  opacity: 70%;
-}
-
-.pixel.filled {
-  background-color: red;
 }
 
 dialog {
@@ -102,38 +109,29 @@ dialog .container {
   padding: 1rem;
 }
 
-label {
-  margin-right: 1rem;
-  text-wrap: nowrap;
-}
-
 dialog label,
 dialog input,
 dialog button {
   font-size: 1.5rem;
 }
 
-input {
-  background-color: var(--input-background-color);
-  border: 0.0625rem solid var(--border-color);
-  border-radius: 0.5rem;
-  color: inherit;
-  text-align: center;
-  width: 5rem;
-}
-
-input:focus {
-  outline: none;
-}
-
-dialog button {
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.25rem 1.25rem;
-}
-
-.field {
+#grid {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  width: calc(3rem * 16);
+}
+
+.pixel {
+  background-color: black;
+  border: 0.0625rem solid #020202;
+  height: 3rem;
+  width: 3rem;
+}
+
+.pixel:hover {
+  opacity: 70%;
+}
+
+.pixel.filled {
+  background-color: red;
 }

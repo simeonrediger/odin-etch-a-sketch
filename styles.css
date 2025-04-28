@@ -43,9 +43,9 @@ header {
   text-wrap: nowrap;
 }
 
+button,
 label,
-input,
-button {
+input {
   font-size: 1.5rem;
 }
 
@@ -58,6 +58,7 @@ button {
 }
 
 .field {
+  align-items: center;
   display: flex;
   gap: 1rem;
 }

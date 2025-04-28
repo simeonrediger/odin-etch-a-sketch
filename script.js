@@ -22,6 +22,7 @@ function setUpSettingsModal() {
 }
 
 function populateGrid() {
+
     for (let i = 0; i < gridSize ** 2; i++) {
         const pixel = document.createElement('div');
         pixel.classList.add('pixel');

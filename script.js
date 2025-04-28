@@ -1,16 +1,18 @@
 setUpSettingsModal();
 
-const grid = document.querySelector('#grid');
-const gridSize = 16;
-populateGrid();
-
 let leftMouseIsDown;
-trackLeftMouseClicks();
+let rightMouseIsDown;
+trackMouseButtonStates();
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+const grid = document.querySelector('#grid');
+let gridSize = 16;
+populateGrid(gridSize);
 
 function setUpSettingsModal() {
     const settingsModal = document.querySelector('#settings');
     const openSettingsButton = document.querySelector('button.settings');
-    const closeSettingsButton = document.querySelector('#settings button.close');
+    const closeSettingsButton = document.querySelector('#settings .close');
 
     openSettingsButton.addEventListener(
         'click', () => settingsModal.showModal()
@@ -21,37 +23,55 @@ function setUpSettingsModal() {
     );
 }
 
-function populateGrid() {
+function populateGrid(gridSize) {
 
     for (let i = 0; i < gridSize ** 2; i++) {
         const pixel = document.createElement('div');
         pixel.classList.add('pixel');
-
-        pixel.addEventListener('mousedown', draw);
-        pixel.addEventListener('mouseenter', event => {
-            if (leftMouseIsDown) {
-                draw(event);
-            }
-        });
-
+        pixel.addEventListener('mousedown', updatePixel);
+        pixel.addEventListener('mouseenter', updatePixel);
         grid.append(pixel);
     }
 }
 
-function trackLeftMouseClicks() {
-    document.body.addEventListener('mousedown', () => leftMouseIsDown = true);
-    document.body.addEventListener('mouseup', () => leftMouseIsDown = false);
+function trackMouseButtonStates() {
+
+    for (const eventType of ['mousedown', 'mouseup']) {
+
+        document.body.addEventListener(
+            eventType,
+            updateMouseButtonState,
+            true, // update states before pixel
+        );
+    }
 }
 
-function draw(event) {
+function updateMouseButtonState(event) {
+    const buttonIsDown = event.type === 'mousedown';
+
+    switch (event.button) {
+        case 0: // left mouse button
+            leftMouseIsDown = buttonIsDown;
+            break;
+        case 2: // right mouse button
+            rightMouseIsDown = buttonIsDown;
+    }
+}
+
+function updatePixel(event) {
     const pixel = event.target;
+
+    if (leftMouseIsDown && !rightMouseIsDown) {
+        draw(pixel);
+    } else if (rightMouseIsDown && !leftMouseIsDown) {
+        erase(pixel);
+    }
+}
+
+function draw(pixel) {
     pixel.classList.add('filled');
 }
 
-function openSettingsModal() {
-    settingsMenu.showModal();
-}
-
-function closeSettingsModal() {
-    settingsMenu.close();
+function erase(pixel) {
+    pixel.classList.remove('filled');
 }

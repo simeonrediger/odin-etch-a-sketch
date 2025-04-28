@@ -1,0 +1,5 @@
+- implement custom grid sizing
+- round grid corners
+- rename setUpSettingsModal to prepareSettingsModal
+- rename populateGrid to prepareGrid
+- create separate files for settings modal, mouse state, and pixel logic

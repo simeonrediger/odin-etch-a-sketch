@@ -1,4 +1,4 @@
-setUpSettingsModal();
+prepareSettingsModal();
 
 let leftMouseIsDown;
 let rightMouseIsDown;
@@ -7,9 +7,9 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 const grid = document.querySelector('#grid');
 let gridSize = 16;
-populateGrid(gridSize);
+prepareGrid(gridSize);
 
-function setUpSettingsModal() {
+function prepareSettingsModal() {
     const settingsModal = document.querySelector('#settings');
     const openSettingsButton = document.querySelector('button.settings');
     const closeSettingsButton = document.querySelector('#settings .close');
@@ -23,7 +23,7 @@ function setUpSettingsModal() {
     );
 }
 
-function populateGrid(gridSize) {
+function prepareGrid(gridSize) {
 
     for (let i = 0; i < gridSize ** 2; i++) {
         const pixel = document.createElement('div');

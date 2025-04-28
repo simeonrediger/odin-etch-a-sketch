@@ -16,3 +16,16 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(3rem * 16);
+}
+
+#grid > div {
+  background-color: black;
+  border: 0.125rem solid gray;
+  height: 3rem;
+  width: 3rem;
+}

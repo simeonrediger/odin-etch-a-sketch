@@ -1,3 +1,5 @@
+- make grid container responsive
+- add toolbar to left side
 - fix pixels being skipped when the cursor moves too fast
 - add color picker
 - add color randomizer option

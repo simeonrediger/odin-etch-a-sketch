@@ -17,12 +17,24 @@
   <body>
     <header>
       <h1 id='title'>Pixel Art</h1>
-      <button class='open settings icon'>
-        <i class='bi bi-sliders'></i>
-      </button>
     </header>
 
     <main>
+      <div id='toolbar'>
+        <i class='icon faded bi bi-pencil-fill'></i>
+        <i class='icon faded bi bi-eraser-fill'></i>
+        <button id='color-picker'></button>
+        <button id='randomize-color' class='icon'>
+          <i class='bi bi-shuffle'></i>
+        </button>
+        <button id='burn' class='icon'>
+          <i class='bi bi-fire'></i>
+        </button>
+        <button class='open settings icon'>
+          <i class='bi bi-sliders'></i>
+        </button>
+      </div>
+
       <div id='grid-container'></div>
     </main>
 

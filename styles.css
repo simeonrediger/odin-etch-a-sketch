@@ -5,6 +5,7 @@
   --error-color: #db6b6b;
   --foreground-color: #cccccc;
   --input-background-color: #303030;
+  --toolbar-background-color: #202020;
 }
 
 *,
@@ -33,10 +34,12 @@ body {
 }
 
 header {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
 }
 
 #title {
@@ -93,7 +96,11 @@ input.error {
   padding: unset;
 }
 
-.icon:hover {
+.icon.faded {
+  opacity: 30%;
+}
+
+button .icon:hover {
   color: var(--accent-color);
 }
 
@@ -119,6 +126,26 @@ dialog .container {
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
+}
+
+#toolbar {
+  align-items: center;
+  background-color: var(--toolbar-background-color);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 0.75rem;
+  width: 6rem;
+}
+
+#color-picker {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.open.settings.icon {
+  margin-top: auto;
 }
 
 #grid-container {

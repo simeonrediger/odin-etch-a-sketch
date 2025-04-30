@@ -1,5 +1,5 @@
 import { mouse } from './mouse.js';
-import { art } from './art.js';
+import { tools } from './tools.js';
 
 const container = document.querySelector('#grid-container');
 let size = 16;
@@ -36,9 +36,9 @@ function updatePixel(event) {
     const pixel = event.target;
 
     if (mouse.leftButtonDown && !mouse.rightButtonDown) {
-        art.draw(pixel);
+        tools.draw(pixel);
     } else if (mouse.rightButtonDown && !mouse.leftButtonDown) {
-        art.erase(pixel);
+        tools.erase(pixel);
     }
 }
 

@@ -21,17 +21,35 @@
 
     <main>
       <div id='toolbar'>
-        <i class='icon faded bi bi-pencil-fill'></i>
-        <i class='icon faded bi bi-eraser-fill'></i>
-        <button id='color-picker'></button>
-        <button id='randomize-color' class='icon'>
-          <i class='bi bi-shuffle'></i>
+        <i class='icon faded bi bi-pencil-fill' title='Draw with left click'
+          tabindex='0' aria-label='Draw with left click'
+        ></i>
+
+        <i class='icon faded bi bi-eraser-fill' title='Erase with right click'
+          tabindex='0' aria-label='Erase with right click'
+        ></i>
+
+        <button id='color-picker' title='Select a color'
+          aria-label='Open color selection menu'
+        ></button>
+
+        <button id='randomize-color' class='icon'
+          title='Randomize color of each stroke'
+          aria-label='Randomize color of each stroke'
+        >
+          <i class='bi bi-shuffle' aria-hidden='true'></i>
         </button>
-        <button id='burn' class='icon'>
-          <i class='bi bi-fire'></i>
+
+        <button id='burn' class='icon' title='Burn (darken)'
+          aria-label='Burn (darken)'
+        >
+          <i class='bi bi-fire' aria-hidden='true'></i>
         </button>
-        <button class='open settings icon'>
-          <i class='bi bi-sliders'></i>
+
+        <button class='open settings icon' title='Settings'
+          aria-label='Open settings menu'
+        >
+          <i class='bi bi-sliders' aria-hidden='true'></i>
         </button>
       </div>
 

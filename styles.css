@@ -170,7 +170,7 @@ dialog .container {
   padding: calc(2.5rem / 4 - 0.25rem / 4);
 }
 
-.open.settings.icon {
+li:has(.open.settings.icon) {
   margin-top: auto;
 }
 

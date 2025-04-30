@@ -8,7 +8,7 @@ function trackButtonStates() {
         document.body.addEventListener(
             eventType,
             updateButtonState,
-            true, // update states before pixel
+            true,  // update states before pixel
         );
     }
 }
@@ -17,10 +17,10 @@ function updateButtonState(event) {
     const buttonDown = event.type === 'mousedown';
 
     switch (event.button) {
-        case 0: // left mouse button
+        case 0:  // left mouse button
             leftButtonDown = buttonDown;
             break;
-        case 2: // right mouse button
+        case 2:  // right mouse button
             rightButtonDown = buttonDown;
     }
 }

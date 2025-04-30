@@ -21,4 +21,6 @@ tools.colorMenu.addEventListener('click', event => {
     tools.selectColor(event.target);
 });
 
+tools.setColor(tools.colorPickerButton, 'red');
+
 grid.create(grid.size);

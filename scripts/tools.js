@@ -1,4 +1,4 @@
-let color = 'red';
+let color;
 let isColorMenuOpen = false;
 const colorPickerButton = document.querySelector('#color-picker');
 const colorMenu = document.querySelector('#color-menu');
@@ -22,12 +22,13 @@ function closeColorMenu() {
 }
 
 function selectColor(selectedColorButton) {
-    color = selectedColorButton.dataset.color;
-    setColor(colorPickerButton, color);
+    const colorValue = selectedColorButton.dataset.color;
+    setColor(colorPickerButton, colorValue);
     closeColorMenu();
 }
 
 function setColor(element, colorValue) {
+    color = colorValue;
     element.dataset.color = colorValue;
 }
 
@@ -40,4 +41,5 @@ export const tools = {
     openColorMenu,
     closeColorMenu,
     selectColor,
+    setColor,
 };

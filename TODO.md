@@ -1,11 +1,12 @@
+- implement color randomizer option
+- implement burn tool
 - make grid container responsive
-- add toolbar to left side
+- improve error notice on grid size input
+- fix layout (possibly remove title heading)
 - fix pixels being skipped when the cursor moves too fast
-- add color picker
-- add color randomizer option
-- add burn tool
 
 - add clear grid button?
+- add hex value input to color picker?
 - add eyedropper?
 - add paint bucket?
 - add rectangle tool?

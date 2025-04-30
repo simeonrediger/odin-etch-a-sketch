@@ -20,38 +20,85 @@
     </header>
 
     <main>
-      <div id='toolbar'>
-        <i class='icon faded bi bi-pencil-fill' title='Draw with left click'
-          tabindex='0' aria-label='Draw with left click'
-        ></i>
+      <ul id='toolbar'>
+        <li>
+          <i class='icon faded bi bi-pencil-fill' title='Draw with left click'
+            tabindex='0' aria-label='Draw with left click'
+          ></i>
+        </li>
 
-        <i class='icon faded bi bi-eraser-fill' title='Erase with right click'
-          tabindex='0' aria-label='Erase with right click'
-        ></i>
+        <li>
+          <i class='icon faded bi bi-eraser-fill' title='Erase with right click'
+            tabindex='0' aria-label='Erase with right click'
+          ></i>
+        </li>
 
-        <button id='burn' class='icon' title='Burn (darken)'
-          aria-label='Burn (darken)'
-        >
-          <i class='bi bi-fire' aria-hidden='true'></i>
-        </button>
+        <li>
+          <button id='burn' class='icon' title='Burn (darken)'
+            aria-label='Burn (darken)'
+          >
+            <i class='bi bi-fire' aria-hidden='true'></i>
+          </button>
+        </li>
 
-        <button id='color-picker' title='Select a color'
-          aria-label='Open color selection menu'
-        ></button>
+        <li>
+          <button id='color-picker' title='Select a color'
+            aria-label='Open color selection menu'
+          ></button>
+        </li>
 
-        <button id='randomize-color' class='icon'
-          title='Randomize color of each stroke'
-          aria-label='Randomize color of each stroke'
-        >
-          <i class='bi bi-shuffle' aria-hidden='true'></i>
-        </button>
+        <ul id='color-menu' class='hidden'>
+          <li class='color-option'>
+            <button title='Red' aria-label='Red' data-color='red'></button>
+          </li>
+          <li class='color-option'>
+            <button title='Orange' aria-label='Orange' data-color='orange'
+            ></button>
+          </li>
+          <li class='color-option'>
+            <button title='Yellow' aria-label='Yellow' data-color='yellow'
+            ></button>
+          </li>
+          <li class='color-option'>
+            <button title='Green' aria-label='Green' data-color='green'
+            ></button>
+          </li>
+          <li class='color-option'>
+            <button title='Blue' aria-label='Blue' data-color='blue'></button>
+          </li>
+          <li class='color-option'>
+            <button title='Purple' aria-label='Purple' data-color='purple'
+            ></button>
+          </li>
+          <li class='color-option'>
+            <button title='Pink' aria-label='Pink' data-color='pink'></button>
+          </li>
+          <li class='color-option'>
+            <button title='White' aria-label='White' data-color='white'
+            ></button>
+          </li>
+          <li class='color-option'>
+            <button title='Black' aria-label='Black' data-color='black'></button>
+          </li>
+        </ul>
 
-        <button class='open settings icon' title='Settings'
-          aria-label='Open settings menu'
-        >
-          <i class='bi bi-sliders' aria-hidden='true'></i>
-        </button>
-      </div>
+        <li>
+          <button id='randomize-color' class='icon'
+            title='Randomize color of each stroke'
+            aria-label='Randomize color of each stroke'
+          >
+            <i class='bi bi-shuffle' aria-hidden='true'></i>
+          </button>
+        </li>
+
+        <li>
+          <button class='open settings icon' title='Settings'
+            aria-label='Open settings menu'
+          >
+            <i class='bi bi-sliders' aria-hidden='true'></i>
+          </button>
+        </li>
+      </ul>
 
       <div id='grid-container'></div>
     </main>

@@ -6,7 +6,7 @@ function erase(pixel) {
     pixel.classList.remove('filled');
 }
 
-export const art = {
+export const tools = {
     draw,
     erase,
 };

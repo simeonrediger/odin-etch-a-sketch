@@ -1,6 +1,5 @@
 let primaryTool = 'draw';
 let color = 'red';
-let isColorMenuOpen = false;
 const burnToggleButton = document.querySelector('#burn-toggle');
 const colorPickerButton = document.querySelector('#color-picker');
 const colorMenu = document.querySelector('#color-menu');
@@ -52,14 +51,8 @@ function resetBurn(pixel) {
     pixel.style.filter = 'none';
 }
 
-function openColorMenu() {
-    colorMenu.classList.remove('hidden');
-    isColorMenuOpen = true;
-}
-
-function closeColorMenu() {
-    colorMenu.classList.add('hidden');
-    isColorMenuOpen = false;
+function toggleColorMenu() {
+    colorMenu.classList.toggle('hidden');
 }
 
 function selectColor(selectedColorButton) {
@@ -69,7 +62,7 @@ function selectColor(selectedColorButton) {
         setColor(colorPickerButton, colorValue);
     }
 
-    closeColorMenu();
+    toggleColorMenu();
 }
 
 function setColor(element, colorValue) {
@@ -85,15 +78,13 @@ function toggleBurnMode() {
 export const tools = {
     colorPickerButton,
     colorMenu,
-    get isColorMenuOpen() { return isColorMenuOpen; },
     burnToggleButton,
     draw,
     erase,
-    openColorMenu,
-    closeColorMenu,
     selectColor,
     setPrimaryTool,
     setColor,
     toggleBurnMode,
+    toggleColorMenu,
     useTool,
 };

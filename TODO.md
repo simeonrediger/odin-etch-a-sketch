@@ -1,3 +1,5 @@
+- fix pixel borders
+- convert color picker button handlers to a toggle
 - implement color randomizer option
 - implement burn tool
 - make grid container responsive

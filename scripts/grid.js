@@ -36,7 +36,7 @@ function updatePixel(event) {
     const pixel = event.target;
 
     if (mouse.leftButtonDown && !mouse.rightButtonDown) {
-        tools.draw(pixel);
+        tools.useTool(pixel);
     } else if (mouse.rightButtonDown && !mouse.leftButtonDown) {
         tools.erase(pixel);
     }

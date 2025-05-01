@@ -143,6 +143,10 @@ dialog .container {
   width: 6rem;
 }
 
+.active {
+  color: var(--accent-color);
+}
+
 #color-picker-and-menu {
   display: flex;
   flex-direction: column;
@@ -189,12 +193,12 @@ li:has(.open.settings.icon) {
 
 .pixel {
   background-color: black;
-  border: 0.0625rem solid #020202;
+  box-shadow: 0 0 0 0.0625rem #020202;  /* Unaffected by burn */
   flex: 1;
 }
 
 .pixel:hover {
-  outline: 0.0625rem solid var(--border-color);
+  box-shadow: 0 0 0 0.0625rem white;
   z-index: 1;
 }
 

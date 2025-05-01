@@ -193,7 +193,7 @@ li:has(.open.settings.icon) {
 
 .pixel {
   background-color: black;
-  box-shadow: 0 0 0 0.0625rem #020202;  /* Unaffected by burn */
+  box-shadow: 0 0 0 0.0625rem #020202;
   flex: 1;
 }
 

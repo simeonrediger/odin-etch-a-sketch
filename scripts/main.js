@@ -12,5 +12,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 tools.setColor(tools.colorPickerButton, 'red');
 tools.colorMenu.addEventListener('click', tools.selectColor);
 tools.burnToggleButton.addEventListener('click', tools.toggleBurnMode);
+tools.randomColorButton.addEventListener('click', tools.toggleRandomColorMode);
 
 grid.create(grid.size);

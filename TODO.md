@@ -1,7 +1,4 @@
-- add tool-specific cursors
-- fix color selection
 - fix pixel borders
-- implement color randomizer option
 - make grid container responsive
 - improve error notice on grid size input
 - fix layout (possibly remove title heading)

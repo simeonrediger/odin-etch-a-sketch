@@ -1,8 +1,10 @@
 let primaryTool = 'draw';
 let color = 'red';
+let isColorRandom = false;
 const burnToggleButton = document.querySelector('#burn-toggle');
 const colorPickerButton = document.querySelector('#color-picker');
 const colorMenu = document.querySelector('#color-menu');
+const randomColorButton = document.querySelector('#randomize-color');
 
 function setPrimaryTool(toolName) {
     primaryTool = toolName;
@@ -21,12 +23,23 @@ function useTool(pixel) {
 }
 
 function draw(pixel) {
-    setColor(pixel, color);
+
+    if (isColorRandom) {
+        const randomColorDecimalValue = Math.floor(Math.random() * 0xffffff);
+        const randomColorHexValue = randomColorDecimalValue.toString(16);
+        const randomColorString = `#${randomColorHexValue}`.padStart(7, '0');
+        setColor(pixel, randomColorString);
+
+    } else {
+        setColor(pixel, color);
+    }
+
     resetBurn(pixel);
 }
 
 function erase(pixel) {
     delete pixel.dataset.color;
+    pixel.style.backgroundColor = '';
 }
 
 function burn(pixel) {
@@ -62,7 +75,17 @@ function selectColor(event) {
 
 function setColor(element, colorValue) {
     color = colorValue;
-    element.dataset.color = colorValue;
+
+    if (colorValue.startsWith('#')) {
+        element.style.backgroundColor = colorValue;
+        delete element.dataset.color;
+        colorPickerButton.style.backgroundColor = colorValue;
+
+    } else {
+        element.dataset.color = colorValue;
+        element.style.backgroundColor = '';
+        colorPickerButton.style.backgroundColor = '';
+    }
 }
 
 function toggleBurnMode() {
@@ -70,13 +93,20 @@ function toggleBurnMode() {
     burnToggleButton.classList.toggle('active');
 }
 
+function toggleRandomColorMode() {
+    isColorRandom = !isColorRandom;
+    randomColorButton.classList.toggle('active');
+}
+
 export const tools = {
     colorPickerButton,
     colorMenu,
     burnToggleButton,
+    randomColorButton,
     erase,
     selectColor,
     setColor,
     toggleBurnMode,
+    toggleRandomColorMode,
     useTool,
 };

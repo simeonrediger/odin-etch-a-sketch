@@ -169,6 +169,7 @@ li:has(.open.settings.icon) {
 }
 
 #grid-container {
+  cursor: crosshair;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

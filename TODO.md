@@ -7,6 +7,5 @@
 - add clear grid button?
 - add hex value input to color picker?
 - add eyedropper?
-- add paint bucket?
 - add rectangle tool?
 - add select tool?

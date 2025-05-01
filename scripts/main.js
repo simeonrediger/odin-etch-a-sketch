@@ -9,9 +9,10 @@ mouse.trackButtonStates();
 // Replaces right click behavior with erase tool
 document.addEventListener('contextmenu', event => event.preventDefault());
 
-tools.setColor(tools.colorPickerButton, 'red');
-tools.colorMenu.addEventListener('click', tools.selectColor);
+tools.fillToggleButton.addEventListener('click', tools.toggleFillMode);
 tools.burnToggleButton.addEventListener('click', tools.toggleBurnMode);
+tools.colorMenu.addEventListener('click', tools.selectColor);
 tools.randomColorButton.addEventListener('click', tools.toggleRandomColorMode);
+tools.setColor(tools.colorPickerButton, 'red');
 
 grid.create(grid.size);

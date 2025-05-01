@@ -230,6 +230,10 @@ li:has(.open.settings.icon) {
   background-color: pink;
 }
 
+[data-color='gray'] {
+  background-color: gray;
+}
+
 [data-color='white'] {
   background-color: white;
 }

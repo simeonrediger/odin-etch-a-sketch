@@ -1,6 +1,7 @@
+- add tool-specific cursors
+- fix color selection
 - fix pixel borders
 - implement color randomizer option
-- add tab navigation to color menu
 - make grid container responsive
 - improve error notice on grid size input
 - fix layout (possibly remove title heading)

@@ -147,13 +147,6 @@ dialog .container {
   color: var(--accent-color);
 }
 
-#color-picker-and-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 2.5rem;
-}
-
 #color-picker {
   height: 2.5rem;
   width: 2.5rem;
@@ -163,10 +156,7 @@ dialog .container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
-}
-
-#color-menu.hidden {
-  display: none;
+  width: 2.5rem;
 }
 
 #color-menu button {

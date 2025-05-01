@@ -33,17 +33,9 @@ body {
   user-select: none;
 }
 
-header {
-  margin-bottom: 1.5rem;
-}
-
 main {
   display: flex;
   gap: 2rem;
-}
-
-#title {
-  text-wrap: nowrap;
 }
 
 button,

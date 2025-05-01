@@ -1,7 +1,6 @@
 - fix pixel borders
-- convert color picker button handlers to a toggle
 - implement color randomizer option
-- implement burn tool
+- add tab navigation to color menu
 - make grid container responsive
 - improve error notice on grid size input
 - fix layout (possibly remove title heading)

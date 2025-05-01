@@ -11,7 +11,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 tools.setColor(tools.colorPickerButton, 'red');
 tools.colorPickerButton.addEventListener('click', tools.toggleColorMenu);
-
+tools.colorPickerAndMenu.addEventListener('focusout', tools.toggleColorMenu);
 tools.colorMenu.addEventListener('click', event => {
     tools.selectColor(event.target);
 });

@@ -1,6 +1,7 @@
 let primaryTool = 'draw';
 let color = 'red';
 const burnToggleButton = document.querySelector('#burn-toggle');
+const colorPickerAndMenu = document.querySelector('#color-picker-and-menu');
 const colorPickerButton = document.querySelector('#color-picker');
 const colorMenu = document.querySelector('#color-menu');
 
@@ -52,6 +53,7 @@ function resetBurn(pixel) {
 }
 
 function toggleColorMenu() {
+    console.log('called');
     colorMenu.classList.toggle('hidden');
 }
 
@@ -61,8 +63,6 @@ function selectColor(selectedColorButton) {
     if (colorValue) {
         setColor(colorPickerButton, colorValue);
     }
-
-    toggleColorMenu();
 }
 
 function setColor(element, colorValue) {
@@ -77,6 +77,7 @@ function toggleBurnMode() {
 
 export const tools = {
     colorPickerButton,
+    colorPickerAndMenu,
     colorMenu,
     burnToggleButton,
     draw,
